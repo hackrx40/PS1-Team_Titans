@@ -1,0 +1,6 @@
+.link:hover {
+    background-color: #223344;
+    transition: "transform 0.2s ease"; 
+    cursor: pointer; 
+  }
+  
