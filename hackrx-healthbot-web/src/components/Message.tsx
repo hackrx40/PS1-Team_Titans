@@ -1,6 +1,6 @@
 import React from "react";
 import { Message as MessageProps } from "../App";
-import { logo } from "../assets/icons";
+import Logo from "../assets/logo.png";
 
 export default function Message({ me, msg, img }: MessageProps) {
   return (
@@ -28,16 +28,17 @@ export default function Message({ me, msg, img }: MessageProps) {
         ) : (
           <div
             style={{
-              backgroundColor: "#10a37f",
-              width: "fit-content",
-              padding: "3px",
+              backgroundColor: "#1d2d50",
+              minHeight:"32px",
+              minWidth:"32px",
+              padding: "1px",
               borderRadius: "4px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
             }}
           >
-            {logo}
+            <img src={Logo} alt="Logo" style={{ width: "20px" }} />
           </div>
         )}
       </div>

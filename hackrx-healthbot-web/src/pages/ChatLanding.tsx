@@ -3,7 +3,7 @@ import { alert, sun, thunder } from "../assets/icons";
 import { Link } from "react-router-dom";
 import bg from "../assets/chatland_bg.png";
 import Navbar from "../components/Navbar";
-
+import "./ChatLanding.css";
 export default function ChatLanding() {
     return (
         <>
@@ -28,7 +28,7 @@ export default function ChatLanding() {
                 className="cols"
                 style={{ display: "flex", flexDirection: "row", gap: "58px" }}
             >
-                <Link to="/chat"
+                <Link className="link" to="/chat"
                     style={{
                         color: "rgba(235, 235, 235, 1)", // Text color
                         textDecoration: "none", // Remove underline
@@ -65,7 +65,7 @@ export default function ChatLanding() {
                         </div>
                     </div>
                 </Link>
-                <Link to="/upload" style={{
+                <Link className="link"  to="/upload" style={{
                     color: "rgba(235, 235, 235, 1)", // Text color
                     textDecoration: "none", // Remove underline
                     fontSize: "18px", // Font size
@@ -102,7 +102,7 @@ export default function ChatLanding() {
                         </div>
                     </div>
                 </Link>
-                <Link to="/medicine" style={{
+                <Link className="link" to="/medicine" style={{
                     color: "rgba(235, 235, 235, 1)", // Text color
                     textDecoration: "none", // Remove underline
                     fontSize: "18px", // Font size
