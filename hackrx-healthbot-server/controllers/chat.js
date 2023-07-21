@@ -8,6 +8,15 @@ exports.chat = async (req, res) => {
     
     let oldConvo = getChatWithID(req.queryId)
     oldConvo.push(message);
+    
+    const data = {
+      prompt : req.body.message,
+    };
+    console.log("Generating response to your message...", data);
+
+    const response = await axios.post('url/generate', data)
+    console.log("Response Generated", response.data)
+
     res.send({
       message: data.choices[0]?.text.trim(),
       _id: data.choices[0] ? tempId : undefined,
