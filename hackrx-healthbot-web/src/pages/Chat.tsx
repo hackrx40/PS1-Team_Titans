@@ -203,9 +203,9 @@ export default function Chat({ auth, handlelogout }) {
               cursor: "pointer",
             }}
           >
-            <option value="Option 1" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>da-vinci-3000</option>
-            <option value="Option 2" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>whisper-1</option>
-            <option value="Option 3" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>babbage</option>
+            <option value="Option 1" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>iClinc</option>
+            <option value="Option 2" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>Healthcare Magic</option>
+            <option value="Option 3" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>National Library of Medicines</option>
           </select>
           <button
             style={{
