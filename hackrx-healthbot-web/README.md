@@ -1,1 +1,1 @@
-# hackrx-healthbot-web
+# Baymax-web
