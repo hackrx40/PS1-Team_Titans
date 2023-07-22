@@ -89,7 +89,7 @@ const UploadPage = () => {
 >
   {lines.map((line, index) => (
     <p key={index}>
-      {index % 2 === 0 && <span style={{ marginRight: "10px" }}>{index/2 + 1}.</span>}
+      {/* {index % 2 === 0 && <span style={{ marginRight: "10px" }}>{index/2 + 1}.</span>} */}
       {line}
     </p>
 ))}
