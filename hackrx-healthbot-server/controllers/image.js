@@ -28,7 +28,7 @@ const processImage = async (id, res)=>{
       url: "https://drive.google.com/uc?id=" + id
     }
     const body = await predictor(data);
-    const message = "Analyse the given predictions from an x-ray image for the chest region. If the probability of something is too low, say that patient is not suffering from them, mentioning the disease. If probability is moderate to high, say that it maybe likely. Remember that it is a chest x-ray so show only relevant problems to the chest. Wrap up the answer in 8 lines.  {" + body + "}";
+    const message = "Analyse the given predictions from an x-ray image for the chest region. If the probability of something is too low, say that patient is not suffering from them, mentioning the disease.  Wrap up the answer in 8 lines and do not number them. If probability is moderate to high, say that it maybe likely. Remember that it is a chest x-ray so show only relevant problems to the chest.  {" + body + "}";
     const obj = {
         role: "user",
         content: message,
