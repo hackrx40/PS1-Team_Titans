@@ -1,6 +1,6 @@
 .link:hover {
-    background-color: #223344;
-    transition: "transform 0.2s ease"; 
-    cursor: pointer; 
-  }
-  
+    background-color: #19334d;
+    /* Change the background color on hover */
+    cursor: pointer;
+    /* Change the cursor to a pointer on hover */
+}
