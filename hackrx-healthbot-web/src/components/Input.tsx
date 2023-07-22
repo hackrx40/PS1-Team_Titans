@@ -20,6 +20,7 @@ export default function Input({
   img,
   handlelogout,
   chatLoading,
+  search
 }: InputProps) {
   const [input, setInput] = useState<string>("");
   function handleInput() {
@@ -31,10 +32,10 @@ export default function Input({
     });
     setInput("");
     toggleLoading(true);
-
+    console.log("Search", search);
     //apiCall
     axios
-      .post(`${url}/chatgpt/chat/${apiKey}`, { message: input })
+      .post(`${url}/chatgpt/chat/${apiKey}`, { message: input, algo: search })
       .then((resp) => {
         toggleLoading(false);
         addMessage({
