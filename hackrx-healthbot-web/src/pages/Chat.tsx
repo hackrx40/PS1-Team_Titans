@@ -116,7 +116,7 @@ export default function Chat({ auth, handlelogout }) {
     if (response) setDiagnosis(responseWithBody);
   }
   
-  const [selectedOption, setSelectedOption] = useState<string>("Option 1");
+  const [selectedOption, setSelectedOption] = useState<string>("greedy");
 
   function addMessage(msg: Message) {
     setMessages((prev) => [...prev, msg]);
@@ -129,6 +129,9 @@ export default function Chat({ auth, handlelogout }) {
 
   const handleFileChange=(e:any) => {
     setFile(e.target.files[0]);
+  }
+  const onSetSearch=(e:any) => {
+    setSearch(e.target.value);
   }
   useEffect(() => {
     if (!diagnosis) return;
@@ -203,9 +206,8 @@ export default function Chat({ auth, handlelogout }) {
               cursor: "pointer",
             }}
           >
-            <option value="Option 1" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>iClinc</option>
-            <option value="Option 2" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>Healthcare Magic</option>
-            <option value="Option 3" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>National Library of Medicines</option>
+            <option value="greedy" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>Greedy</option>
+            <option value="beam" style={{ backgroundColor: "#19334d", color: "#fff", padding: "5px", fontSize: "14px" }}>Beam</option>
           </select>
           <button
             style={{
@@ -312,6 +314,7 @@ export default function Chat({ auth, handlelogout }) {
         }}
       >
         <Input
+          search={selectedOption}
           chatLoading={chatLoading}
           handlelogout={handlelogout}
           img={auth?.avatar}

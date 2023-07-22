@@ -50,7 +50,7 @@ const UploadPage = () => {
       setAnalyzing(true);
       let formData = new FormData();
       formData.append("file", selectedImage);
-      const response = await fetch("http://localhost:8000/uploadimage", {
+      const response = await fetch("http://localhost:8002/uploadimage", {
         method: "POST",
         body: formData,
       });

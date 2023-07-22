@@ -36,7 +36,7 @@ const Medicine = ({ auth, handlelogout }) => {
     };
     console.log(formData);
     try {
-      const res = await axios.post("http://localhost:8000/getMedicationData", formData);
+      const res = await axios.post("http://localhost:8002/getMedicationData", formData);
       console.log(res);
 
       if (res) setDiagnosis(res.data);
