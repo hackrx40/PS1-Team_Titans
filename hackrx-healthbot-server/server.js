@@ -1,6 +1,5 @@
 require("dotenv").config();
 
-const { createCompletionChatGTP } = require("./chatGTP");
 const express = require("express");
 const cors = require("cors");
 const authRouter = require("./routers/auth");
@@ -81,6 +80,7 @@ app.post("/getMedicationData", async (req, res) => {
     console.log(req.body);
 
     const medicData = await medicProcessor.processDrug(req.body, res);
+    // console.log("Drug analysed---", medicData);
     
   } catch (err) {
     console.log(err);
@@ -90,6 +90,6 @@ app.post("/getMedicationData", async (req, res) => {
 app.use("/auth", authRouter);
 app.use("/chatgpt", chatRouter);
 
-app.listen(process.env.PORT || 8000, () => {
-  console.log("Listening server on port : ", process.env.PORT || 8000);
+app.listen(process.env.PORT || 8002, () => {
+  console.log("Listening server on port : ", process.env.PORT || 8002);
 });
